@@ -1,0 +1,7 @@
+<h2><a href="{{ .Permalink}}">{{ .Params.title }}</a></h2>
+<p>{{ .Params.address }}</p>
+<p>{{ .Params.phone }}</p>
+<p>website: {{ .Params.website}} </p>
+<div class="info">
+  {{ .Content | markdownify }}
+</div>

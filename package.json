@@ -5,13 +5,15 @@
   "author": "Phil Hawksworth <phil@netify.com>",
   "license": "MIT",
   "scripts": {
-    "import": "gulp import && gulp yamlify"
+    "import": "gulp import",
+    "generate": "gulp get:addresses"
   },
   "dependencies": {
+    "front-matter": "^2.3.0",
     "gulp": "^3.9.1",
     "gulp-csv-to-json": "^0.1.1",
     "gulp-csv2json": "^0.2.5",
-    "gulp-json-to-yaml": "^0.0.2",
-    "gulp-rename": "^1.2.2"
+    "gulp-data": "^1.3.1",
+    "gulp-json-to-yaml": "^0.0.2"
   }
 }

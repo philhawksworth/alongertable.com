@@ -1,0 +1,7 @@
+---
+title: The Laurels
+phone: (877) 660-9147
+website: https://www.irvinecompanyapartments.com/communities/north-park
+management: Irvine Management Company
+tags: []
+---
