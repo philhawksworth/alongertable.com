@@ -9,6 +9,8 @@ description: home page
 
 ## Perhaps links to other things
 
-- [Housing list](/place)
+- [Affordable housing in San Jose](/places)
+- [Affordable housing management companies](/companies)
+- Food
 
 

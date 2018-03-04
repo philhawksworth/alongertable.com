@@ -7,15 +7,15 @@ location: "San Jose"
 tags: []
 ---
 
-about this place
+about this place here
 
 # 1st level heading
 
 some info here
 
 
-## 2nd level heading
 
+## 2nd level heading
 some more info here
 
 - a list
