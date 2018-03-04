@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://santa-clara-housing.netlify.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Santa Clara Housing Help"
 theme = "simple"
