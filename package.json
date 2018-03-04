@@ -5,6 +5,7 @@
   "author": "Phil Hawksworth <phil@netify.com>",
   "license": "MIT",
   "scripts": {
+    "build": "hugo",
     "import": "gulp import",
     "generate": "gulp get:addresses"
   },
