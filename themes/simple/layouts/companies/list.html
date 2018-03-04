@@ -6,6 +6,9 @@
     <ul>
       {{ range .Data.Pages }}
       <h2><a href="{{ .Params.link}}" target="_BLANK" rel="noopener">{{ .Params.title }}</a></h2>
+      <p>
+        {{ .Content }}
+      </p>
       {{ end }}
     </ul>
   </div>
