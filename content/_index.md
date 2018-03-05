@@ -5,12 +5,6 @@ title: housing
 description: home page
 ---
 
-# San Jose affordable housing
+# Santa Clara Affordable Housing
 
-## Perhaps links to other things
-
-- [Affordable housing in San Jose](/places)
-- [Affordable housing management companies](/companies)
-- Food
-
-
+This unofficial site gathers resources for seeking housing in the Santa Clara district.
