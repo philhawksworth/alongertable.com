@@ -5,17 +5,26 @@ html {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   @include bp(narrow) {
-    font-size: 20px;
+    font-size: 18px;
   }
   @include bp(mid) {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 
 h1, h2, h3, h4 {
   font-weight: 600;
   line-height: 1.1;
-  padding-top: 2em;
+  padding-top: 1em;
   padding-bottom: 1em;
   color: $text-color;
+}
+
+h1.logo {
+  padding-top: 0.5em;
+
+  a:link,
+  a:visited {
+    color: #fff;
+  }
 }

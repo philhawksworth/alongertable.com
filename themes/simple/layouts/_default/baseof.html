@@ -6,11 +6,22 @@
   </head>
   <body>
     <header>
-      <h1 class="logo"><a href="/" title="Home">Santa Clara Affordable Housing</a></h1>
+      <h1 class="logo"><a href="/" title="Home">A longer table</a></h1>
+
       {{ partial "navigation.html" }}
     </header>
-    <main role="main">
-      {{ block "main" . }}{{ end }}
+    <main role="main" class="container">
+      <div class="title">
+        <h2>{{ .Title }}</h2>
+      </div>
+      <div class="content">
+        {{ block "main" . }}{{ end }}
+      </div>
     </main>
+    <footer>
+      <div class="container">
+        We should have some disclaimer content and some contact information in this footer.
+      </div>
+    </footer>
   </body>
 </html>

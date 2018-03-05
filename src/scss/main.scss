@@ -12,12 +12,61 @@ body {
   text-align: center;
 }
 
+.container {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  @include bp(narrow) {
+    width: 80%;
+  }
+  @include bp(mid) {
+    width: 500px;
+  }
+  @include bp(wide) {
+    width: 900px;
+  }
+}
+
+header {
+  background-color: $primary-dark-color;
+  padding-bottom: 4em;
+}
+
+main {
+  margin-top: -4em;
+  background-color: $page-color;
+  padding-top: 1em;
+  padding-top: 1em;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-radius: 6px;
+}
+
+footer {
+  margin-top:2em;
+  padding-top:2em;
+
+  .container {
+    border-top: 1px solid #ccc;
+    padding-top:2em;
+    font-size: 0.8em;
+  }
+}
+
 .navigation {
+
+  margin-bottom: 1em;
 
   li {
     display: inline;
     margin-left: 0.5em;
     margin-right: 0.5em;
+
+    a:link,
+    a:visited  {
+      color: mix($primary-dark-color, $page-color, 0.9)
+    }
   }
 
 }
