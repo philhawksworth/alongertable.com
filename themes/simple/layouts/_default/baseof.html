@@ -2,9 +2,11 @@
 <html>
   <head>
     <title>housing</title>
+    <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
   </head>
   <body>
     <header>
+      <h1 class="logo"><a href="/" title="Home">Santa Clara Affordable Housing</a></h1>
       {{ partial "navigation.html" }}
     </header>
     <main role="main">

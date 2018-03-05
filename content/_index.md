@@ -5,6 +5,4 @@ title: housing
 description: home page
 ---
 
-# Santa Clara Affordable Housing
-
 This unofficial site gathers resources for seeking housing in the Santa Clara district.

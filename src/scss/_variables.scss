@@ -1,0 +1,11 @@
+// Breakpoints
+$bp-narrow: "(min-width: 400px)";
+$bp-mid: "(min-width: 740px)";
+$bp-wide: "(min-width: 1200px)";
+
+// Colours
+$page-color: #fff;
+$text-color: #000;
+$accent-color: #3366cc;
+$faint-accent-color: mix($accent-color, $page-color, 15%);
+$dull-accent-color: mix($accent-color, $page-color, 50%);

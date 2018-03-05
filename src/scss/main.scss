@@ -1,0 +1,23 @@
+@import '_variables';
+@import '_mixins';
+@import '_type';
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: center;
+}
+
+.navigation {
+
+  li {
+    display: inline;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+}

@@ -2,7 +2,47 @@ var gulp        = require('gulp');
 var fs          = require('fs');
 var csv2json    = require('gulp-csv2json');
 var jsonToYaml  = require('gulp-json-to-yaml');
+var sass        = require("gulp-sass");
+var hash        = require("gulp-hash");
+var clean       = require('gulp-clean');
+var serve       = require('gulp-serve');
 
+var buildDest = "public";
+
+
+// local webserver for development
+gulp.task('serve', serve({
+  root: [buildDest],
+  port: 8008,
+}));
+
+
+
+// Compile SCSS files to CSS
+gulp.task("scss", ['clean-css'], function () {
+
+  //compile hashed css files
+  gulp.src("src/scss/main.scss")
+    .pipe(sass({
+      outputStyle: "compressed"
+    }).on('error', sass.logError))
+    .pipe(hash())
+    .pipe(gulp.dest("themes/simple/static/css"))
+    .pipe(hash.manifest("hash.json"))
+    .pipe(gulp.dest("data/css"))
+});
+
+// Delete our old css files
+gulp.task('clean-css', function () {
+  return gulp.src('themes/simple/static/css/**/*', {read: false})
+    .pipe(clean());
+});
+
+// cleanup the build output
+gulp.task('clean-build', function () {
+  return gulp.src(buildDest, {read: false})
+    .pipe(clean());
+});
 
 
 
@@ -59,3 +99,11 @@ tags: []
 
 
 
+
+
+
+
+// Watch src folder for changes
+gulp.task("watch", ["scss"], function () {
+  gulp.watch("src/scss/**/*", ["clean-build", "scss"])
+});
