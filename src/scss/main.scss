@@ -45,6 +45,7 @@ main {
 
 footer {
   margin-top:2em;
+  margin-bottom:2em;
   padding-top:2em;
 
   .container {
@@ -86,6 +87,22 @@ footer {
       background-color: mix($primary-dark-color, $page-color, 10% );
       transition:all 0.1s ease;
     }
+  }
+
+}
+
+
+
+main {
+
+  li {
+
+    padding-bottom: 0.4em;
+
+    p {
+      margin-left: 1.4em;
+    }
+
   }
 
 }
