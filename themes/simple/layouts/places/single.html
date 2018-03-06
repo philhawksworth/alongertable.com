@@ -1,5 +1,9 @@
+{{ define "breadcrumb" }}
+  <a href="/places">back to the list of housing</a>
+{{ end }}
+
+
 {{ define "main" }}
-  <h2>{{ .Params.title }}</h2>
   <p>{{ .Params.phone }}</p>
   {{ if .Params.website }}
   <p><a href="{{ .Params.website }}" target="_BLANK" rel="noopener">website</a></p>

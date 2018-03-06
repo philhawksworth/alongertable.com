@@ -1,10 +1,15 @@
+{{ define "breadcrumb" }}
+  <a href="/housing">back to housing</a>
+{{ end }}
+
+
 {{ define "main" }}
 
   {{ .Content }}
   <div class="listing">
     <ul>
       {{ range .Data.Pages }}
-      <h2><a href="{{ .Permalink}}">{{ .Params.title }}</a></h2>
+      <li><a href="{{ .Permalink}}">{{ .Params.title }}</a></li>
       {{ end }}
     </ul>
   </div>

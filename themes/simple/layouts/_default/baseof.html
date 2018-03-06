@@ -15,6 +15,10 @@
       </div>
     </header>
     <main role="main" class="container">
+      <div class="breadcrumb">
+      {{ block "breadcrumb" . }}{{ end }}
+      </div>
+
       <div class="title">
         <h2>{{ .Title }}</h2>
       </div>
