@@ -28,11 +28,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+
   @include bp(narrow) {
-    width: 360px;
+    width: 340px;
   }
   @include bp(mid) {
-    width: 500px;
+    width: 90%;
   }
   @include bp(wide) {
     width: 800px;
@@ -49,9 +50,22 @@ main {
   background-color: $page-color;
   padding-top: 1em;
   padding-top: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
-  border-radius: 6px;
+
+  @include bp(narrow) {
+    border-radius: 6px;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+  @include bp(mid) {
+    border-radius: 6px;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  @include bp(wide) {
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
 }
 
 footer {
