@@ -4,10 +4,12 @@ var csv2json    = require('gulp-csv2json');
 var jsonToYaml  = require('gulp-json-to-yaml');
 var sass        = require("gulp-sass");
 var hash        = require("gulp-hash");
+var concat      = require("gulp-concat");
 var clean       = require('gulp-clean');
 var serve       = require('gulp-serve');
 
 var buildDest = "public";
+var buildSrc = "src";
 
 
 // local webserver for development
@@ -15,6 +17,15 @@ gulp.task('serve', serve({
   root: [buildDest],
   port: 8008,
 }));
+
+
+
+// simplest possible noddy js management
+gulp.task("js", function () {
+  return gulp.src(buildSrc + "/js/**/*.js")
+    .pipe(concat('alongertable.js'))
+    .pipe(gulp.dest('static/js'))
+});
 
 
 
@@ -43,6 +54,8 @@ gulp.task('clean-build', function () {
   return gulp.src(buildDest, {read: false})
     .pipe(clean());
 });
+
+
 
 
 
@@ -104,6 +117,7 @@ tags: []
 
 
 // Watch src folder for changes
-gulp.task("watch", ["scss"], function () {
-  gulp.watch("src/scss/**/*", ["clean-build", "scss"])
+gulp.task("watch", ["scss", "js"], function () {
+  gulp.watch("src/scss/**/*", ["scss"])
+  gulp.watch("src/js/**/*", ["js"])
 });

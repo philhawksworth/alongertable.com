@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>housing</title>
+    <title>A Longer Table</title>
     <link rel="stylesheet" href="/css/{{ index .Site.Data.css.hash "main.css" }}" />
+    <meta name="description" value="A collection of resources for those seeking some help with shelter and housing in Santa Clara county." >
+    <script src="/js/alongertable.js" defer></script>
   </head>
   <body>
     <header>
@@ -28,7 +30,17 @@
     </main>
     <footer>
       <div class="container">
-        We should have some disclaimer content and some contact information in this footer.
+        <div class="toggle-panel">
+          <p>
+            Have you found any information on this page which is out of date or incorrect? Help us to keep the site accurate by <a href="#" class="toggler">suggesting a change</a>.
+          </p>
+          <div class="toggled">
+          {{ partial "comment-form.html" . }}
+          </div>
+        </div>
+        <p>
+          This site is not affiliated with any of the organizations or services that it describes. Information here is compiled and maintained by volunteers and no liability is accepted for the its use.
+        </p>
       </div>
     </footer>
   </body>
