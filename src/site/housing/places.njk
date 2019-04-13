@@ -1,0 +1,16 @@
+---
+title: Affordable housing
+layout: default
+---
+
+<p>
+  Affordable housing in the San Jose area
+</p>
+
+<ul class="listing">
+{%- for place in apartments -%}
+  <li>
+    <a href="{{ place.name | slug }}">{{ place.name }}</a>
+  </li>
+{%- endfor -%}
+</ul>

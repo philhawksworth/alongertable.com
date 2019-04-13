@@ -1,27 +1,20 @@
 {
-  "name": "housing",
+  "name": "a-longer-table",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Phil Hawksworth <phil@netify.com>",
+  "author": "Phil Hawksworth",
   "license": "MIT",
   "scripts": {
-    "start": "gulp clean-build && gulp scss && gulp js && hugo server -D --disableFastRender & gulp watch",
-    "build": "gulp clean-build && gulp scss && gulp js && hugo",
-    "css": "gulp scss",
-    "import": "gulp import",
-    "generate": "gulp get:addresses"
+    "start": "gulp dev & ELEVENTY_ENV=dev eleventy --serve",
+    "build": "gulp build & ELEVENTY_ENV=dev eleventy"
   },
   "dependencies": {
-    "front-matter": "^2.3.0",
-    "gulp": "^3.9.1",
-    "gulp-clean": "^0.4.0",
+    "@11ty/eleventy": "^0.8.2",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-csv-to-json": "^0.1.1",
-    "gulp-csv2json": "^0.2.5",
-    "gulp-data": "^1.3.1",
-    "gulp-hash": "^4.2.2",
-    "gulp-json-to-yaml": "^0.0.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-serve": "^1.4.0"
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.12.1"
   }
 }
