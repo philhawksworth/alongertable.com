@@ -1,0 +1,17 @@
+---
+pagination:
+  data: apartments
+  size: 1
+  alias: place
+permalink: housing/affordable-housing/{{ place.name | slug }}/index.html
+layout: default
+title: Housing
+---
+
+<h2>{{ place.name }}</h2>
+<ul>
+  {% if place.phone %}<li>Phone: {{ place.phone }}</li>{% endif %}
+  {% if place.address %}<li>Address: {{ place.address }}</li>{% endif %}
+  {% if place.management %}<li>Management: {{ place.management }}</li>{% endif %}
+  {% if place.website %}<li><a href="{{ place.website }}" target="_BLANK" rel="noopener">Website</a></li>{% endif %}
+</ul>

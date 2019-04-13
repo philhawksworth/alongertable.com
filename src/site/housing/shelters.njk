@@ -1,16 +1,17 @@
 ---
-title: Affordable housing
+title: Shelter
 layout: default
 ---
 
 <p>
-  Affordable housing in the San Jose area
+  List of shelters in the Santa Clara area
 </p>
 
 <ul class="listing">
-{%- for place in apartments -%}
+{%- for place in shelters -%}
   <li>
     <a href="{{ place.name | slug }}">{{ place.name }}</a>
   </li>
 {%- endfor -%}
 </ul>
+
