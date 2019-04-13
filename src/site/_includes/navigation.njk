@@ -7,7 +7,7 @@
 <ul class="navigation">
   {% for link in primaryLinks %}
   <li>
-    <a class="{{link.url}}{% if page.url == "/"+link.url+"/" %} active{% endif %}" href="/{{link.url}}">{{link.title}}</a>
+    <a class="{{link.url}}{% if page.url.split("/")[1] == link.url %} active{% endif %}" href="/{{link.url}}">{{link.title}}</a>
   </li>
   {% endfor %}
 </ul>
