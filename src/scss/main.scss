@@ -111,8 +111,15 @@ footer {
       line-height: 3em;
     }
 
+    a.active:link,
+    a.active:visited  {
+      background-color: rgba(255,255,255,0.1);
+    }
+
     a:hover,
-    a:focus {
+    a:focus,
+    a.active:hover,
+    a.active:focus  {
       color: $primary-dark-color;
       background-color: mix($primary-dark-color, $page-color, 10% );
     }

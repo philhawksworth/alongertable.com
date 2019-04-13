@@ -1,0 +1,17 @@
+---
+title: Shelter
+layout: default
+---
+
+<p>
+  List of shelters in the Santa Clara area
+</p>
+
+<ul class="listing">
+{%- for place in shelters -%}
+  <li>
+    <a href="{{ place.name | slug }}">{{ place.name }}</a>
+  </li>
+{%- endfor -%}
+</ul>
+

@@ -1,0 +1,13 @@
+{% set primaryLinks = [
+  {"url": "housing", "title": "Housing"},
+  {"url": "medical", "title": "Medical"},
+  {"url": "support", "title": "Support services"}
+] %}
+
+<ul class="navigation">
+  {% for link in primaryLinks %}
+  <li>
+    <a class="{{link.url}}{% if page.url.split("/")[1] == link.url %} active{% endif %}" href="/{{link.url}}">{{link.title}}</a>
+  </li>
+  {% endfor %}
+</ul>
