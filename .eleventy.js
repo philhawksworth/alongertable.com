@@ -20,10 +20,13 @@ module.exports = function(config) {
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 
 
+
+
+
   // pass some assets right through
   // config.addPassthroughCopy("./src/site/images");s
 
-  // make the seed target act like prod
+
   return {
     dir: {
       input: "src/site",
