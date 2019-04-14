@@ -1,8 +1,10 @@
 const axios  = require('axios');
 // const seed   = require('../../../utils/save-seed.js');
 
-// var url = 'https://spreadsheets.google.com/feeds/list/1gzNuhVoL01ioql-FJIEg9FstS36d-hVkZqQi8UxPAG0/od6/public/values?alt=json';
-var url = 'https://spreadsheets.google.com/feeds/list/17m9vrk7-0q89-kHBdr7VO7Sews6pTrIquT_l5Lg77qk/od6/public/values?alt=json';
+var sheetTab = 5;
+var url = `https://spreadsheets.google.com/feeds/list/17m9vrk7-0q89-kHBdr7VO7Sews6pTrIquT_l5Lg77qk/${sheetTab}/public/values?alt=json`;
+
+console.log('URL :', url);
 
 module.exports = () => {
   return new Promise((resolve, reject) => {
@@ -16,13 +18,12 @@ module.exports = () => {
             "address" : element.gsx$address.$t,
             "url" : element.gsx$website.$t,
             "phone" : element.gsx$phonenumber.$t,
-            "management" : element.gsx$management.$t,
-            "notes" : element.gsx$notes.$t
+            "type" : element.gsx$type.$t,
+            "description" : element.gsx$description.$t
           };
 
           results.push(result);
         });
-
 
         // seed(JSON.stringify(results), `${__dirname}/../dev/events.json`)
         resolve(results);

@@ -1,19 +1,16 @@
 ---
-title: Shelters
+title: Support
 layout: default
 ---
 
 <p>
-  List of shelters in the Santa Clara area
+  This unofficial site gathers resources for seeking support in the Santa Clara district.
 </p>
 
 <ul class="listing">
-{%- for place in housing -%}
-  {% if place.type == "shelter" %}
+{%- for place in support -%}
   <li>
     <a href="{{ place.name | slug }}">{{ place.name }}</a>
   </li>
-  {% endif %}
 {%- endfor -%}
 </ul>
-

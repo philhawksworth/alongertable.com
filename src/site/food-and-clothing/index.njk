@@ -1,0 +1,16 @@
+---
+title: Food and clothing
+layout: default
+---
+
+<p>
+  This unofficial site gathers resources for seeking food and clothing in the Santa Clara district.
+</p>
+
+<ul class="listing">
+{%- for place in foodAndClothing -%}
+  <li>
+    <a href="{{ place.name | slug }}">{{ place.name }}</a>
+  </li>
+{%- endfor -%}
+</ul>
