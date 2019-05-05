@@ -40,3 +40,5 @@ The site is hosted on [Netlify](https://www.netlify.com) and changes are deploye
 
 - commits are pushed to the master branch of this repository
 - changes are published from the [Google Sheet](https://docs.google.com/spreadsheets/d/17m9vrk7-0q89-kHBdr7VO7Sews6pTrIquT_l5Lg77qk/edit?usp=sharing)
+
+Further configuration and control over domains and deployments is possible via the [Netlify Admin](https://app.netlify.com/sites/alongertable) for the site. (For authorised users)
