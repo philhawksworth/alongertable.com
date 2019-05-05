@@ -2,7 +2,7 @@
 
 A set of resources for those in need of support in Santa Clara County.
 
-https://alongertable.net
+https://alongertable.com
 
 ## Working on this site
 
@@ -16,10 +16,10 @@ This site it built with a static site generator called [Eleventy](https://11ty.i
 ```bash
 
 # clone the repository
-git clone git@github.com:philhawksworth/santaclara-housing.git
+git clone git@github.com:philhawksworth/alongertable.com.git
 
 # install the dependencies
-$ cd santaclara-housing
+$ cd alongertable.com
 $ yarn
 
 # run and serve the local build
