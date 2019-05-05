@@ -16,6 +16,16 @@ module.exports = function(config) {
     }).toFormat(format);
   });
 
+  config.addFilter("where", (array, query) => {
+    let args = query.split("=");
+    let key = args[0];
+    let value = args[1];
+    return array.filter(function(item){
+      return item[key] == value;
+    });
+  });
+
+
   // minify the html output
   config.addTransform("htmlmin", require("./src/utils/minify-html.js"));
 

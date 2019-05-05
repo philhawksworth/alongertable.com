@@ -8,24 +8,34 @@ layout: default
 </p>
 
 
-
-
+{% set showers = support | where("type=showers")%}
+{% if showers.length %}
 <h2>Showers facilities</h2>
-{%- for item in support | selectattr("type", "shower") -%}
+{%- for item in showers -%}
   {% include "place-details.njk" %}
 {%- endfor -%}
+{% endif %}
 
+{% set laundry = support | where("type=laundry")%}
+{% if laundry.length %}
 <h2>Laundry facilities</h2>
-{%- for item in support | selectattr("type", "laundry") -%}
+{%- for item in laundry -%}
   {% include "place-details.njk" %}
 {%- endfor -%}
+{% endif %}
 
+{% set transport = support | where("type=transportation")%}
+{% if transport.length %}
 <h2>Transportation</h2>
-{%- for item in support | selectattr("type", "transportation") -%}
+{%- for item in transport -%}
   {% include "place-details.njk" %}
 {%- endfor -%}
+{% endif %}
 
+{% set legal = support | where("type=legal")%}
+{% if legal.length %}
 <h2>Legal assistance</h2>
-{%- for item in support | selectattr("type", "legal") -%}
+{%- for item in legal -%}
   {% include "place-details.njk" %}
 {%- endfor -%}
+{% endif %}
