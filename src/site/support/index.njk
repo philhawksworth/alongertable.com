@@ -9,6 +9,23 @@ layout: default
 
 
 
-{%- for item in support -%}
+
+<h2>Showers facilities</h2>
+{%- for item in support | selectattr("type", "shower") -%}
+  {% include "place-details.njk" %}
+{%- endfor -%}
+
+<h2>Laundry facilities</h2>
+{%- for item in support | selectattr("type", "laundry") -%}
+  {% include "place-details.njk" %}
+{%- endfor -%}
+
+<h2>Transportation</h2>
+{%- for item in support | selectattr("type", "transportation") -%}
+  {% include "place-details.njk" %}
+{%- endfor -%}
+
+<h2>Legal assistance</h2>
+{%- for item in support | selectattr("type", "legal") -%}
   {% include "place-details.njk" %}
 {%- endfor -%}
