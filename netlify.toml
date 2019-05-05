@@ -2,3 +2,8 @@
   command="yarn run build"
   publish="dist"
 
+[[redirects]]
+  from = "https://alongertable.netlify.com/*"
+  to = "https://alongertable.com/:splat"
+  response = 301
+  force = true

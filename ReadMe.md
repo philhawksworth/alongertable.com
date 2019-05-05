@@ -18,7 +18,7 @@ This site it built with a static site generator called [Eleventy](https://11ty.i
 # clone the repository
 git clone git@github.com:philhawksworth/santaclara-housing.git
 
-## install the dependencies
+# install the dependencies
 $ cd santaclara-housing
 $ yarn
 
