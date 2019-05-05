@@ -7,10 +7,8 @@ layout: default
   This unofficial site gathers resources for seeking support in the Santa Clara district.
 </p>
 
-<ul class="listing">
-{%- for place in support -%}
-  <li>
-    <a href="{{ place.name | slug }}">{{ place.name }}</a>
-  </li>
+
+
+{%- for item in support -%}
+  {% include "place-details.njk" %}
 {%- endfor -%}
-</ul>
